@@ -1,0 +1,468 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  text-decoration: none;
+  list-style: none;
+}
+/* .brand-logo {
+  width: 100px;
+  height: 100px;
+} */
+.header-list a:hover {
+  color: black;
+}
+.section-three-card .img-container img {
+  height: 200px !important;
+}
+
+.section-three-card:hover img {
+  transform: scale(1.1);
+
+  transition: all ease 0.8s;
+}
+.section-four-img {
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+.footer-title {
+  font-size: 30px;
+  font-weight: 600;
+}
+.footer-desc {
+  padding: 5px 0;
+}
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* overlay rengi ve şeffaflığı */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal içeriği */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-height: 80vh; /* Modal içeriğinin maksimum yüksekliği */
+  overflow-y: auto; /* İçerik aştığında kaydırma çubuğunu göster */
+}
+.modal-card {
+  width: 100%;
+  height: 300px;
+  padding: 5px;
+  overflow: hidden;
+  object-position: bottom;
+}
+.modal-img {
+  width: 100%;
+  max-height: 250px;
+}
+
+.modal-info {
+  margin-left: 20px; /* Ürün bilgileri ile resim arasında boşluk bırak */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.basket-header {
+  display: flex;
+  justify-content: center;
+
+  padding: 10px;
+}
+.basket-header p {
+  background-color: rgb(175, 175, 175);
+  color: white;
+  width: 100%;
+  padding: 5px;
+}
+.basket-btn {
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
+.basket-page {
+  position: fixed;
+  top: 72px;
+  right: 0;
+  width: 300px;
+  min-height: 95vh;
+  max-height: 95vh;
+  background-color: #fff;
+  border-left: 1px solid #ccc;
+  z-index: 1000;
+  overflow-y: scroll;
+}
+
+.basket-product {
+  padding: 2px;
+}
+.basket-product img {
+  max-width: 220px;
+  max-height: 200px;
+  object-fit: cover;
+}
+.basket-info {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 5px;
+}
+.basket-delete-btn {
+  border-radius: 20px;
+  padding: 5px;
+  background-color: red;
+  color: white;
+  margin-top: 10px;
+}
+.basket-delete-btn:hover {
+  background-color: white;
+  color: red;
+}
+.basket-bottom .buying {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.contact-container {
+  display: flex;
+
+  width: 100%;
+  flex-wrap: wrap;
+  min-height: 80vh;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden !important;
+}
+.form {
+  max-width: 600px;
+  width: 100%;
+  margin: 20px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+
+  min-height: 500px;
+  padding: 20px;
+}
+.form input {
+  width: 100%;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 5px;
+  cursor: auto;
+  outline: none;
+}
+.form button,
+.buying,
+.section-three-btn {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: 1px solid transparent;
+  margin-top: 20px;
+  width: 300px;
+  font-weight: 500;
+}
+.buying {
+  margin-bottom: 15px;
+}
+.form button:hover,
+.buying:hover,
+.section-three-btn:hover {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
+.form-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+.productspage-list {
+  margin-top: 80px;
+
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.productpage-item-card {
+  width: 250px;
+
+  max-height: 550px;
+  margin: 15px 4px;
+}
+.pp-card-image-wrapper {
+  position: relative;
+}
+.pp-card-image-wrapper img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+}
+.image-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0; /* İlk başta görünmez olması için opacity ayarlayın */
+  transition: opacity 0.55s ease; /* Geçiş efekti ekleyin */
+}
+.pp-card-image-wrapper:hover .image-hover {
+  visibility: visible;
+  opacity: 1; /* Fare üzerine gelindiğinde görünür olması için opacity ayarlayın */
+}
+.pp-card-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.pp-buy-btn {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border: 1px solid transparent;
+  width: 100px;
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+.pp-buy-btn:hover,
+.product-item-page-btn:hover {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
+.input-error {
+  border: 2px solid #fc8181 !important;
+}
+.error {
+  color: #fc8181;
+  font-size: 12px;
+  text-align: left;
+}
+.product-item-page-container {
+  display: flex;
+  padding: 20px;
+  margin-top: 80px;
+  width: 100%;
+}
+.product-item-page-img-container {
+  min-width: 30%;
+  max-height: 500px;
+  object-fit: cover;
+  position: relative;
+  overflow: hidden;
+}
+.product-item-page-img-container:hover img {
+  transform: scale(1.1);
+  transition: all 0.8s ease;
+  cursor: pointer;
+}
+.product-item-page-img {
+  width: 100%;
+  height: 100%;
+}
+.product-item-page-card {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.product-item-page-img-info-container {
+  width: 40%;
+  padding: 40px;
+}
+.product-item-page-img-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.product-item-page-desc {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.product-item-page-price {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.product-item-page-btn {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border: 1px solid transparent;
+  width: 200px;
+}
+.stars {
+  display: flex;
+  color: yellow;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+}
+.sizes-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-right: 5px;
+  font-size: 16px;
+}
+.sizes {
+  display: flex;
+
+  padding: 5px;
+}
+.size {
+  border: 1px solid gainsboro;
+  padding: 6px;
+  cursor: pointer;
+}
+.size:hover {
+  background-color: rgba(220, 220, 220, 0.934);
+}
+.otherImages-container {
+  position: relative;
+  overflow: hidden;
+  height: 120px;
+  margin: 2px;
+}
+.otherImages-container:hover .otherImage {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.otherImages {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.otherImage {
+  object-fit: cover;
+
+  width: 120px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    width: 100%;
+    font-size: 12px;
+  }
+  .header-input {
+    width: 50px;
+    height: 20px;
+  }
+  .brand-logo {
+    width: 50px;
+  }
+  .form {
+    width: 100%;
+    height: 80vh;
+  }
+  .buying {
+    margin-bottom: 50px;
+  }
+  .footer-title {
+    font-size: 16px;
+  }
+  .footer-desc {
+    font-size: 12px;
+  }
+  .footer input {
+    width: 80px;
+    height: 20px;
+  }
+  .app-store,
+  .play-store {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  .store-container {
+    margin-left: 10px;
+  }
+  .img-desc {
+    font-size: 12px;
+  }
+  .section-three-btn {
+    width: 100px;
+
+    font-size: 10px;
+    font-weight: 300;
+    padding: 4px;
+  }
+  .section-four-img {
+    height: 70px;
+    object-fit: cover;
+  }
+  .section-five-container img {
+    object-fit: cover;
+  }
+  .section-five-container p {
+    font-size: 12px;
+  }
+  .section-five-wrapper {
+    padding: 5px;
+  }
+  .product-item-page-container {
+    display: flex;
+  }
+  .product-item-page-card {
+    flex-direction: column;
+  }
+
+  .basket-page {
+    top: 56px;
+  }
+  .product-item-page-img-info-container {
+    width: 100%;
+  }
+}
