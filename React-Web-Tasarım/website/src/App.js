@@ -38,7 +38,7 @@ function App() {
       const updatedItems = [...cartItems];
       updatedItems[existingItemIndex].quantity += 1;
       updatedItems[existingItemIndex].price =
-        updatedItems[existingItemIndex].quantity * product.price; // Ürün miktarıyla fiyatı çarp
+        updatedItems[existingItemIndex].quantity * product.price;
 
       setCartItems(updatedItems);
     } else {
